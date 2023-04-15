@@ -4,7 +4,6 @@ pipeline {
         stage('Install') {
             steps { 
             bat 'npm install' 
-            bat 'npm install -g serve'
             echo "Installing..."
             }
         }
@@ -16,7 +15,7 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-            bat 'serve -s build' 
+            bat 'copy /var/lib/jenkins/workspace/class/dist/class/. /var/lib/jenkins/workspace/class2' 
             echo "Deploying..."
          }
         }
