@@ -15,7 +15,7 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-            bat 'copy /var/lib/jenkins/workspace/class/dist/class/. /var/lib/jenkins/workspace/class2' 
+            bat 'xcopy C:/ProgramData/Jenkins/.jenkins/workspace/class/dist/class C:/Users/91999/Desktop/Test /O /X /E /H /K' 
             echo "Deploying..."
          }
         }
