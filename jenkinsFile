@@ -20,7 +20,7 @@ pipeline {
                         flattenFiles: false,
                         includes: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\class\\dist\\class\**',
                         targetLocation: "C:\\Users\\91999\\Desktop\\Test"
-                        )])
+                    )])
          }
         }
        
