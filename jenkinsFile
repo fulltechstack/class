@@ -15,8 +15,7 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-             sh 'npm install pm2'
-             sh './node_modules/.bin/pm2 serve dist/ --name class --spa --port 5000'
+            cp -a /var/lib/jenkins/workspace/Angular/dist/class /opt/class/
             echo "Deploying..."
          }
         }
