@@ -18,7 +18,7 @@ pipeline {
             fileOperations([fileCopyOperation(
                         excludes: '',
                         flattenFiles: false,
-                        includes: '/dist/class/**',
+                        includes: "C:/ProgramData/Jenkins/.jenkins/workspace/class/dist/**",
                         targetLocation: "C:/Users/91999/Desktop/Test"
                     )])
             echo "Deploying..."
