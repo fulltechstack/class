@@ -3,19 +3,19 @@ pipeline {
     stages {
         stage('Install') {
             steps { 
-            bat 'npm install' 
+            sh 'npm install' 
             echo "Installing..."
             }
         }
         stage('build') {
             steps { 
-            bat 'npm run ng -- build' 
+            sh 'npm run ng -- build' 
             echo "Building..."
             }
         }
         stage('deploy') {
             steps { 
-            bat 'copy /var/lib/jenkins/workspace/class/dist/class/. /var/lib/jenkins/workspace/class2' 
+            sh 'copy /var/lib/jenkins/workspace/class/dist/class/. /var/lib/jenkins/workspace/class2' 
             echo "Deploying..."
          }
         }
