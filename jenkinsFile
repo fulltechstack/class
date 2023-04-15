@@ -15,7 +15,7 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-            sh 'npx http-server dist/your-app-name -p 4200'
+            sh 'npx http-server dist/class -p 4200'
             echo "Deploying..."
          }
         }
