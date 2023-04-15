@@ -18,7 +18,7 @@ pipeline {
             fileOperations([fileCopyOperation(
                         excludes: '',
                         flattenFiles: false,
-                        includes: '*/dist/**',
+                        includes: './dist/class/**',
                         targetLocation: "C:/Users/91999/Desktop/Test"
                     )])
             echo "Deploying..."
