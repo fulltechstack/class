@@ -15,7 +15,7 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-            sh 'copy /var/lib/jenkins/workspace/class/dist/class/. /var/lib/jenkins/workspace/class2' 
+            sh 'npx http-server dist/your-app-name -p 4200'
             echo "Deploying..."
          }
         }
