@@ -15,12 +15,8 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-            fileOperations([fileCopyOperation(
-                        excludes: '',
-                        flattenFiles: false,
-                        includes: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\class\\dist\\class\**',
-                        targetLocation: "C:\\Users\\91999\\Desktop\\Test"
-                    )])
+            bat 'xcopy C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\class\\dist\\class\** C:\\Users\\91999\\Desktop\\Test' 
+            echo "Deploying..."
          }
         }
        
