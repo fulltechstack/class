@@ -15,7 +15,7 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-            cp -a /var/lib/jenkins/workspace/Angular/dist/class/. /opt/class/
+            cp -a /var/lib/jenkins/workspace/Angular/dist/. /opt/
             echo "Deploying..."
          }
         }
