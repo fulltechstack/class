@@ -15,8 +15,8 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-            sh 'npm install -g pm2'
-            sh 'pm2 serve dist/ --name myapp --spa'
+             sh 'npm install pm2'
+             sh './node_modules/.bin/pm2 serve dist/ --name class --spa'
             echo "Deploying..."
          }
         }
