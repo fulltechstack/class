@@ -2,21 +2,27 @@ pipeline {
     agent any
     stages {
         stage('Install') {
-            steps { 
+            steps {
+            echo "Installing..."     
             bat 'npm install' 
-            echo "Installing..."
+            }
+        }
+        stage('test') {
+            steps { 
+            echo "Testing..."    
+            bat 'ng test --watch false' 
             }
         }
         stage('build') {
             steps { 
+            echo "Building..."    
             bat 'npm run ng -- build' 
-            echo "Building..."
             }
         }
         stage('deploy') {
             steps { 
-            bat 'xcopy /s /y "C:/ProgramData/Jenkins/.jenkins/workspace/class/dist/class" "C:/Users/91999/Desktop/Test"'
             echo "Deploying..."
+            bat 'xcopy /s /y "C:/ProgramData/Jenkins/.jenkins/workspace/class/dist/class" "C:/Users/91999/Desktop/Test"'
          }
         }
        
