@@ -10,7 +10,7 @@ pipeline {
         stage('test') {
             steps { 
             echo "Testing..."    
-            bat 'npm run ng test --watch false' 
+            bat 'npm run ng -- test --watch false' 
             }
         }
         stage('build') {
