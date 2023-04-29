@@ -1,6 +1,6 @@
 FROM node:lts-alpine3.16
 
-ENV PORT=3010
+ENV PORT=4200
 
 WORKDIR /app
 
@@ -8,5 +8,5 @@ COPY package*.json ./
 RUN npm install
 
 COPY . .
-EXPOSE 3010
-CMD ["npm","start"]
+EXPOSE 4200
+CMD ["npm","run","start"]
